@@ -4,26 +4,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainMenuGUI extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainMenuGUI frame = new MainMenuGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -33,8 +23,58 @@ public class MainMenuGUI extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(null);
 		setContentPane(contentPane);
+		
+		JLabel lblNewLabel = new JLabel("Elige el modo");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 23));
+		lblNewLabel.setBounds(142, 6, 157, 53);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Radio");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton.setBounds(20, 95, 117, 29);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Reproduccion");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton_1.setBounds(171, 95, 117, 29);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Telefono");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton_2.setBounds(315, 95, 117, 29);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Productividad");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton_3.setBounds(171, 175, 117, 29);
+		contentPane.add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("Apagar");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton_4.setBounds(20, 29, 78, 17);
+		contentPane.add(btnNewButton_4);
 	}
 
 }

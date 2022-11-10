@@ -4,6 +4,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TurnONOFFGUI extends JFrame {
 
@@ -35,6 +40,19 @@ public class TurnONOFFGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
+		
+		JLabel lblNewLabel = new JLabel("Mercedez Benz Radio");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
+		lblNewLabel.setBounds(90, 6, 269, 74);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Encender");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnNewButton.setBounds(168, 145, 117, 29);
+		contentPane.add(btnNewButton);
 	}
-
 }
