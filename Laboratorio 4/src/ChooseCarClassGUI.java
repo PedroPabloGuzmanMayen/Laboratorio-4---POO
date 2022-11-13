@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 public class ChooseCarClassGUI extends JFrame {
 
 	private JPanel contentPane;
+	private String name;
 
 
 	/**
@@ -25,6 +26,7 @@ public class ChooseCarClassGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
+		setVisible(true);
 		
 		JLabel lblNewLabel = new JLabel("Elige la clase de tu vehículo");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 29));
@@ -34,6 +36,8 @@ public class ChooseCarClassGUI extends JFrame {
 		JButton btnNewButton = new JButton("Clase A");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				name = "Clase 1";
+				MainMenuGUI mainmenu = new MainMenuGUI(name);
 				
 			}
 		});
@@ -43,7 +47,8 @@ public class ChooseCarClassGUI extends JFrame {
 		JButton btnNewButton_1 = new JButton("Clase B");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				name = "Clase 2";
+				MainMenuGUI mainmenu = new MainMenuGUI(name);
 			}
 		});
 		btnNewButton_1.setBounds(170, 114, 117, 29);

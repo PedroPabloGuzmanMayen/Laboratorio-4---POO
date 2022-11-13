@@ -13,18 +13,20 @@ import java.awt.event.ActionEvent;
 public class MainMenuGUI extends JFrame {
 
 	private JPanel contentPane;
-
-
+	String hola;
+	
 	/**
 	 * Create the frame.
 	 */
-	public MainMenuGUI() {
+	public MainMenuGUI(String string) {
+		this.hola = string;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
+		setVisible(true);
 		
 		JLabel lblNewLabel = new JLabel("Elige el modo");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 23));
@@ -34,7 +36,7 @@ public class MainMenuGUI extends JFrame {
 		JButton btnNewButton = new JButton("Radio");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				RadioGUI radio = new RadioGUI();
 			}
 		});
 		btnNewButton.setBounds(20, 95, 117, 29);
@@ -43,7 +45,7 @@ public class MainMenuGUI extends JFrame {
 		JButton btnNewButton_1 = new JButton("Reproduccion");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				ReproductionGUI reproduction = new ReproductionGUI();
 			}
 		});
 		btnNewButton_1.setBounds(171, 95, 117, 29);
@@ -75,6 +77,9 @@ public class MainMenuGUI extends JFrame {
 		});
 		btnNewButton_4.setBounds(20, 29, 78, 17);
 		contentPane.add(btnNewButton_4);
+		
+		
+	
 	}
 
 }

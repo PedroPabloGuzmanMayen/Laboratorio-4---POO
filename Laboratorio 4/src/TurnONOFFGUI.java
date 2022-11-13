@@ -49,7 +49,7 @@ public class TurnONOFFGUI extends JFrame {
 		JButton btnNewButton = new JButton("Encender");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				ChooseCarClassGUI choosecar = new ChooseCarClassGUI();
 			}
 		});
 		btnNewButton.setBounds(168, 145, 117, 29);
